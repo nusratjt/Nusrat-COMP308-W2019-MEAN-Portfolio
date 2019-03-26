@@ -91,7 +91,7 @@
     text-align: center;
   }
 
- /* Image gallery*/
+ /* Contact Page*/
  #contactPage{
     margin-top: 150px;
     padding: 10px;
@@ -109,4 +109,24 @@
     background-color: lightgray;
     margin-left: auto;
     margin-right: auto;
+ }
+
+/* add Page*/
+#addPage{
+    margin-top: 150px;
+    padding: 10px;
+    background-color: lightgray;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+ }
+
+ /* edit Page*/
+ #editPage{
+    margin-top: 150px;
+    padding: 10px;
+    background-color: lightgray;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
  }
