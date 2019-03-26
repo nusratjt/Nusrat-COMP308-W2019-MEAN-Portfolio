@@ -1,86 +1,16 @@
-<!--
+<% include ../partials/header.ejs %>
 
-/**
-  * file name: project.ejs
-  * Student name: Nusrat Jahan
-  * Student Id: 300967157
-  * Date: Feb 16, 2019
-  */
+    <div id="projectPage">
+      <div class="jumbotron">
 
--->
-
-<!-- Project page -->
-<%include ../partials/header.ejs %>
-
-<div id="projectPage">
-
-  <div>
-
-    <h3 class="text-primary font-weight-bold projecthead">
-      My Project works in Centennial College</h3>
-    <div class="ml-auto mr-auto pl-5 w-75">
-
-      <!--  Description and imges of projects -->
-
-      <table class="table table-striped p-5 table-hover">
-
-        <!--  Project 01 -->
-        <tr class="table-dark">
-          <td>
-            <h4 class="text-center pt-5 text-dark">Web Interface Design</br>
-              with HTml 5 and CSS 3</h4>
-            <p class="lead pt-5 font-weight-normal text-dark">
-              This project was about creating a Car dealership Website using HTml 5 and CSS 3 in Dynamic Web Template.
-              As it was an individual assignment, I created the whole website by myself.
-            </p>
-          </td>
-          <td><img src="Assets/images/Project01.JPG" alt="Web Interface Design project"
-              style="width:300px; height:300px;"></td>
-
-        </tr>
-
-        <!--  Project 02 -->
-
-        <tr class="table-light">
-
-          <td class="text-center pt-5"><img src="Assets/images/Project02.JPG"
-              alt="Client-side Web Development project" style="width:300px; height:300px;"></td>
-          <td>
-            <h4 class="text-center pt-5 text-dark">Client-side Web Development</br>
-              with ASP.Net Core MVC</h4>
-            <p class="lead pt-5 font-weight-normal text-dark">
-              My team created a Course Handling website using ASP.Net Core 2 in MVC framework.
-              This website allowed registered students view, enroll courses and non-authinticated users could only
-              register and view courses. Authinticated and authorized admin could create, read, update and delete (CRUD)
-              courses.</br>
-              As a team member, I worked with adding contents, CRUD functionality, pagination and CSS.
-            </p>
-          </td>
-
-        </tr>
-
-        <!--  Project 03 -->
-        <tr class="table-dark">
-          <td>
-            <h4 class="text-center pt-5 text-dark">Unix/Linux Operating System</h4>
-            <p class="lead pt-5 font-weight-normal text-dark">
-              In this course, I was assigned to create a website of my own choice on a Linux
-              operating system using PHP programming. I expressed my passion about nature and
-              represented natural beauty of my home country through this website.</br>
-              In this project, I used Ubuntu which is a free and open-source Linux distribution based on Debian.
-              By this work, I learned how to manage files, use UNIX utilities and develope scripts.
-            </p>
-          </td>
-          <td class="text-center pt-5"><img src="Assets/images/Project03.PNG"
-              alt="Unix/Linux Operating System project" style="width:300px; height:300px;"></td>
-
-        </tr>
-      </table>
-
+        <h3 class="text-primary font-weight-bold">
+          My Project works in Centennial College</h3>
+          
+          <div class="mt-5 pt-5 ">
+              <a class="btn btn-primary" href="/project-list" role="button">Project List</a>
+          </div>
+         
+      </div>
     </div>
 
-  </div>
-</div>
-
-
-<%include ../partials/footer.ejs %>
+<% include ../partials/footer.ejs %>
