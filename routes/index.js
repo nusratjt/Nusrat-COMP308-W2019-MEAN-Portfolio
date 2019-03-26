@@ -5,52 +5,29 @@
   * Date: Feb 16, 2019
   */
 
-let express = require('express');
-let router = express.Router();
-//let contactInfo = require('../models/contact');
-
+ let express = require('express');
+ let router = express.Router();
+ 
+ let indexController = require('../controllers/index');
+ 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('home/index', { title: 'Home' });
-});
+router.get('/', indexController.displayHomePage);
 
 /* GET about page. */
-router.get('/about', function(req, res, next) {
-  res.render('home/about', { title: 'About Me' });
-});
+router.get('/about', indexController.displayAboutPage);
 
 /* GET projects page. */
-router.get('/projects', function(req, res, next) {
-  res.render('home/project', { title: 'Projects' });
-});
+router.get('/projects', indexController.displayProjectPage);
 
 /* GET services page. */
-router.get('/services', function(req, res, next) {
-  res.render('home/service', { title: 'Services' });
-});
+router.get('/services', indexController.displayServicePage);
 
 /* GET contact page. */
-router.get('/contact', function(req, res, next) {
-  res.render('contacts/index', { title: 'Contact' });
-});
+router.get('/contact', indexController.displayContactPage);
 
 
 /* get contact information using POST method. */
-router.post('/contact', function(req, res, next) {
-  //console.log(req.body);
-
-  /** Holds values that user input */
-  let contactInfo = {
-    "firstName" : req.body.firstName,
-    "lastName": req.body.lastName,
-    "contactNumber": req.body.contactNumber,
-    "email": req.body.email,
-    "message": req.body.message
-  };
-
-  res.render('contacts/contactinfo', { title: "Contact Information", contactInfo: contactInfo});
-  
-});
+router.post('/contact', indexController.displayContactInfoPage);
 
 
 module.exports = router;

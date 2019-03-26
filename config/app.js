@@ -15,7 +15,7 @@ let logger = require('morgan');
 
  // database setup
 let mongoose = require('mongoose');
-let DB = require('./config/db');
+let DB = require('./db');
 
 // point Mongoose to the DB URI
 mongoose.connect(DB.URI);
@@ -28,8 +28,8 @@ mongoDB.once('open', ()=> {
 
 
 
-let indexRouter = require('./routes/index');
-let projectRouter = require('./routes/project');
+let indexRouter = require('../routes/index');
+let projectRouter = require('../routes/project');
 
 let app = express();
 
@@ -41,8 +41,8 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'node_modules')));
+app.use(express.static(path.join(__dirname, '../../public')));
+app.use(express.static(path.join(__dirname, '../../node_modules')));
 
 app.use('/', indexRouter);
 app.use('/project-list', projectRouter);
