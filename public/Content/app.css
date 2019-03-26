@@ -130,3 +130,23 @@
     margin-right: auto;
     width: 75%;
  }
+
+ /* login Page*/
+ #loginPage{
+    margin-top: 150px;
+    padding: 10px;
+    background-color: lightgray;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+ }
+
+ /* register Page*/
+ #registerPage{
+    margin-top: 150px;
+    padding: 10px;
+    background-color: lightgray;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+ }
