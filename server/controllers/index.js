@@ -96,7 +96,7 @@ module.exports.displayHomePage = (req, res, next) => {
         if(err) {
           return next(err);
         }
-        return res.redirect('/contact-list');
+        return res.redirect('/project-list');
       });
     })(req, res, next);
   };
@@ -142,7 +142,7 @@ module.exports.displayHomePage = (req, res, next) => {
   
         // redirect the user
         return passport.authenticate("local")(req, res, () => {
-          res.redirect("/contact-list");
+          res.redirect("/project-list");
         });
       }
     });
@@ -152,5 +152,7 @@ module.exports.displayHomePage = (req, res, next) => {
     req.logout();
     res.redirect("/");
   };
+
+  
   
    

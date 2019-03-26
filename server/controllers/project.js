@@ -14,7 +14,8 @@ module.exports.displayProjectList = (req, res, next) =>{
 
             res.render('projects/index', {
                 title: 'Project List',
-                projectList: projectList
+                projectList: projectList,
+                displayName: req.user ? req.user.displayName : ""
             });
             
         }
@@ -23,7 +24,8 @@ module.exports.displayProjectList = (req, res, next) =>{
 
 module.exports.displayAddPage = (req, res, next) => {
     res.render('projects/add', {
-        title: 'Add New Project'
+        title: 'Add New Project',
+        displayName: req.user ? req.user.displayName : ""
     });
 }
 
@@ -60,7 +62,8 @@ module.exports.displayEditPage = (req, res, next) => {
             // show the edit view
             res.render('projects/edit', {
                 title: 'Edit Project',
-                project: projectObject
+                project: projectObject,
+                displayName: req.user ? req.user.displayName : ""
             });
         }
     });
