@@ -25,6 +25,8 @@
                         <th class="text-center">Course Name</th>
                         <th class="text-center">Project Name</th>
                         <th class="text-center">Description</th>
+                        <th class="text-center"></th>
+                        <th class="text-center"></th>
                     </tr>
 
                     <!-- Repeatable Template Row -->
@@ -33,6 +35,14 @@
                             <td class="text-center"><%= projectList[count].courseName %></td>
                             <td class="text-center"><%= projectList[count].projectName %></td>
                             <td class="text-center"><%= projectList[count].description %></td>
+                            <td class="text-center">
+                                    <a href="/project-list/edit/<%= projectList[count]._id %>"
+                                        class="btn btn-primary"><i class="fas fa-pencil-alt"></i> Edit</a>
+                                    </td>
+                                    <td class="text-center">
+                                            <a href="/project-list/delete/<%= projectList[count]._id %>"
+                                                class="btn btn-danger"><i class="fas fa-trash-alt"></i> Delete</a>
+                                            </td>
                         </tr>
                     <% } %>
                 </table>

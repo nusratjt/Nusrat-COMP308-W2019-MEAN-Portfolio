@@ -13,7 +13,7 @@
   */
 
   
-let app = require('./app');
+let app = require('./server/config/app');
 let debug = require('debug')('nusrat-comp308-w2019-portfolio:server');
 let http = require('http');
 

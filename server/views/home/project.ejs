@@ -2,14 +2,13 @@
 
     <div id="projectPage">
       <div class="jumbotron">
-
         <h3 class="text-primary font-weight-bold">
-          My Project works in Centennial College</h3>
-          
+          My Project works in Centennial College</h3>          
           <div class="mt-5 pt-5 ">
+          <%  if( displayName == "admin" ) { %>
               <a class="btn btn-primary" href="/project-list" role="button">Project List</a>
-          </div>
-         
+            <% } %>              
+          </div>         
       </div>
     </div>
 

@@ -31,7 +31,7 @@ module.exports.displayAddPage = (req, res, next) => {
 
 module.exports.processAddPage = (req, res, next) => {
 
-    let newContact = projectModel({
+    let newProject = projectModel({
         "courseName": req.body.courseName,
         "projectName": req.body.projectName,
         "description": req.body.description

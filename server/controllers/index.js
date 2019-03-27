@@ -1,5 +1,11 @@
-let express = require('express');
+let express = require("express");
 let router = express.Router();
+let mongoose = require("mongoose");
+let passport = require("passport");
+
+// define the User Model
+let userModel = require("../models/user");
+let User = userModel.User; // alias
 
 /* GET home page. */
 module.exports.displayHomePage = (req, res, next) => {
