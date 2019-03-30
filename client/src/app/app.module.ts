@@ -15,10 +15,15 @@ import { ProjectComponent } from './pages/project/project.component';
 import { ServiceComponent } from './pages/service/service.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { ProjectListComponent } from './projects/project-list/project-list.component';
+import { RegisterComponent } from './pages/register/register.component';
+import { LoginComponent } from './pages/login/login.component';
+import { ProjectDetailsComponent } from './projects/project-details/project-details.component';
+import { ProjectDeleteComponent } from './projects/project-delete/project-delete.component';
 
 // Services
 import { FlashMessagesModule, FlashMessagesService } from 'angular2-flash-messages';
-import { ProjectListComponent } from './projects/project-list/project-list.component';
+
 
 
 @NgModule({
@@ -32,7 +37,11 @@ import { ProjectListComponent } from './projects/project-list/project-list.compo
     ServiceComponent,
     ContactComponent,
     PageNotFoundComponent,
-    ProjectListComponent
+    ProjectListComponent,
+    RegisterComponent,
+    LoginComponent,
+    ProjectDetailsComponent,
+    ProjectDeleteComponent
 
   ],
   imports: [
