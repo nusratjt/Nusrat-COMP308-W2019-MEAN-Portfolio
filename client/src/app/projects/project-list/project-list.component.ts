@@ -30,10 +30,15 @@ export class ProjectListComponent implements OnInit {
     this.displayProjectList();
   }
 
+  private onDeleteClick(): void {
+    if(!confirm('Are You Sure?')) {
+      this.router.navigate(['/project/project-list']);
+    }
+  }
+
   displayProjectList(): void {
     this.projectListService.getList().subscribe(data => {
       if(data.success) {
-        console.log(data);
         this.projects = data.projectList;
       } else {
         this.flashMessage.show('User must be logged-in', {cssClass: 'alert-danger', timeOut: 3000});
