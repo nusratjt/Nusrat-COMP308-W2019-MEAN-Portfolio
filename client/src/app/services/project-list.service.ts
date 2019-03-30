@@ -10,7 +10,7 @@ import { Project } from '../models/project';
 })
 export class ProjectListService {
 
-  private endpoint = 'http://localhost:3000/api/project-list';
+  private endpoint = 'http://localhost:3000/api/project-list/';
 
   private httpOptions = {
     headers: new HttpHeaders({
@@ -24,5 +24,20 @@ export class ProjectListService {
 
   public getList(): Observable<any> {
     return this.http.get<any>(this.endpoint, this.httpOptions);
+  }
+
+  public getProject(project: Project): Observable<any> {
+    return this.http.get<any>(this.endpoint + 'edit/' + project._id, this.httpOptions);
+  }
+  public addProject(project: Project): Observable<any> {
+    return this.http.post<any>(this.endpoint + 'add', project, this.httpOptions);
+  }
+
+  public editProject(project: Project): Observable<any> {
+    return this.http.post<any>(this.endpoint + 'edit/' + project._id, project, this.httpOptions);
+  }
+
+  public deleteProject(project: Project): Observable<any> {
+    return this.http.get<any>(this.endpoint + 'delete/' + project._id, this.httpOptions);
   }
 }

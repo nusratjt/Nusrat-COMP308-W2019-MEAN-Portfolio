@@ -1,39 +1,37 @@
 <div id="projectPage">
   <div class="row">
-      <div class="col-md-offset-3 col-md-6">
-          <h1 class="mt-5">Project List</h1><br>
-          <a class="btn btn-primary" routerLink="add" role="button">
-              <i class="fa fa-plus-circle"></i> Add new Project</a>
-              <br>
-          <br>
-          <table class="table table-bordered table-striped table-hover">
-              <!-- Header Row-->
-              <tr>
-                  <th class="text-center">Course Name</th>
-                  <th class="text-center">Project Name</th>
-                  <th class="text-center">Description</th>
-                  <th class="text-center"></th>
-                  <th class="text-center"></th>
-              </tr>
+    <div class="col-md-offset-3 col-md-6">
+      <h1 class="mt-5">Project List</h1><br>
+      <a class="btn btn-primary" routerLink="/project/project-list/add" role="button">
+        <i class="fa fa-plus-circle"></i> Add new Project</a>
+      <br>
+      <br>
+      <table class="table table-bordered table-striped table-hover">
+        <!-- Header Row-->
+        <tr>
+          <th class="text-center">Course Name</th>
+          <th class="text-center">Project Name</th>
+          <th class="text-center">Description</th>
+          <th class="text-center"></th>
+          <th class="text-center"></th>
+        </tr>
 
-             <!-- Repeatable Template Row -->
+        <!-- Repeatable Template Row -->
 
-                  <tr *ngFor="let project of projects">
-                      <td class="text-center">{{ project.courseName }}</td>
-                      <td class="text-center">{{ project.projectName }}</td>
-                      <td class="text-center">{{ project.description }}</td>
-                      <td class="text-center">
-                              <a routerLink="edit/{{ project._id }}"
-                                  class="btn btn-primary"><i class="fas fa-pencil-alt"></i> Edit</a>
-                              </td>
-                              <td class="text-center">
-                                      <a routerLink="delete/{{ project._id }}"
-                                          class="btn btn-danger"><i class="fas fa-trash-alt"></i> Delete</a>
-                                      </td>
-                  </tr>
+        <tr *ngFor="let project of projects">
+          <td class="text-center">{{ project.courseName }}</td>
+          <td class="text-center">{{ project.projectName }}</td>
+          <td class="text-center">{{ project.description }}</td>
+          <td class="text-center">
+            <a routerLink="/project/project-list/edit/{{ project._id }}" class="btn btn-primary"><i class="fas fa-pencil-alt"></i> Edit</a>
+          </td>
+          <td class="text-center">
+            <a routerLink="/project/project-list/delete/{{ project._id }}" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Delete</a>
+          </td>
+        </tr>
 
-          </table>
+      </table>
 
-      </div>
+    </div>
   </div>
 </div>
