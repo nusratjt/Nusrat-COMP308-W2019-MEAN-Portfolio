@@ -1,5 +1,7 @@
 let express = require('express');
 let router = express.Router();
+let jwt = require('jsonwebtoken');
+
 
 // create a reference to the db schema
 let projectModel = require('../models/project');
@@ -12,22 +14,16 @@ module.exports.displayProjectList = (req, res, next) =>{
         else {
            // console.log(projectList);
 
-            res.render('projects/index', {
-                title: 'Project List',
-                projectList: projectList,
-                displayName: req.user ? req.user.displayName : ""
-            });
+           res.json({success: true, msg: 'Project List Displayed Successfully', projectList: projectList, user: req.user});
             
         }
     });
 }
 
 module.exports.displayAddPage = (req, res, next) => {
-    res.render('projects/add', {
-        title: 'Add New Project',
-        displayName: req.user ? req.user.displayName : ""
-    });
+    res.json({success: true, msg: 'Successfully Displayed Add Page'});
 }
+
 
 module.exports.processAddPage = (req, res, next) => {
 
@@ -43,8 +39,7 @@ module.exports.processAddPage = (req, res, next) => {
             res.end(err);
         }
         else {
-            // refresh the project list
-            res.redirect('/project-list');
+            res.json({success: true, msg: 'Successfully Added New Project'});
         }
     });
 }
@@ -59,12 +54,9 @@ module.exports.displayEditPage = (req, res, next) => {
         }
         else
         {
-            // show the edit view
-            res.render('projects/edit', {
-                title: 'Edit Project',
-                project: projectObject,
-                displayName: req.user ? req.user.displayName : ""
-            });
+
+            res.json({success: true, msg: 'Successfully Displayed Project to Edit', project: projectObject});
+            
         }
     });
 }
@@ -85,8 +77,7 @@ module.exports.processEditPage = (req, res, next) => {
             res.end(err);
         }
         else {
-            // refresh the project list
-            res.redirect('/project-list');
+            res.json({success: true, msg: 'Successfully Edited Contact', project: updatedProject});
         }
     })
 }
@@ -100,8 +91,7 @@ module.exports.performDelete = (req, res, next) => {
             res.end(err);
         }
         else {
-            // refresh the project list
-            res.redirect('/project-list');
+            res.json({success: true, msg: 'Successfully Deleted Project'});
         }
     });
 }

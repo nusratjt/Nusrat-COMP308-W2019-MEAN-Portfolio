@@ -1,0 +1,42 @@
+/* Service Page */
+#servicePage{
+  margin-top: 150px;
+  padding: 10px;
+  background-color: lightgray;
+
+}
+.servicehead{
+  margin-top: 50px;
+  margin-left: 50px;
+  padding-top: 50px;
+  padding-bottom: 30px;
+
+}
+
+/* Image gallery*/
+#imageGallery{
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  background-color: beige;
+  height: 800px;
+}
+#imageGallery .gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 300px;
+}
+
+#imageGallery .gallery:hover {
+  border: 1px solid #777;
+}
+
+#imageGallery .gallery img {
+  padding: 10px;
+}
+
+#imageGallery .desc {
+  padding: 15px;
+  text-align: center;
+}

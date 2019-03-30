@@ -11,32 +11,32 @@
  let indexController = require('../controllers/index');
  
 /* GET home page. */
-router.get('/', indexController.displayHomePage);
+//router.get('/', indexController.displayHomePage);
 
 /* GET about page. */
-router.get('/about', indexController.displayAboutPage);
+//router.get('/about', indexController.displayAboutPage);
 
 /* GET projects page. */
-router.get('/projects', indexController.displayProjectPage);
+//router.get('/project', indexController.displayProjectPage);
 
 /* GET services page. */
-router.get('/services', indexController.displayServicePage);
+//router.get('/service', indexController.displayServicePage);
 
 /* GET contact page. */
-router.get('/contact', indexController.displayContactPage);
+//router.get('/contact', indexController.displayContactPage);
 
 
 /* get contact information using POST method. */
-router.post('/contact', indexController.displayContactInfoPage);
+//router.post('/contact', indexController.displayContactInfoPage);
 
 /* GET - displays the Login Page */
-router.get('/login', indexController.displayLoginPage);
+//router.get('/login', indexController.displayLoginPage);
 
 /* POST - processes the Login Page */
 router.post('/login', indexController.processLoginPage);
 
 /* GET - displays the User Registration Page */
-router.get('/register', indexController.displayRegisterPage);
+//router.get('/register', indexController.displayRegisterPage);
 
 /* POST - processes the User Registration Page */
 router.post('/register', indexController.processRegisterPage);

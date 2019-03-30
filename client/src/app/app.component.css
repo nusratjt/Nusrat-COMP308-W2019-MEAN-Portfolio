@@ -1,0 +1,7 @@
+/* Home page */
+#homePage {
+ /* background: url('../Assets/images/background01.jpg') no-repeat center center fixed;*/
+  background-size:cover;
+  margin-top: 150px;
+
+}

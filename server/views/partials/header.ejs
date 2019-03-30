@@ -45,19 +45,12 @@
       </br>
         <small class="text-white pl-5">connect with me</small>
 
-      </ul>
-        
-        
-       
-        
-    </div>
-    
+      </ul>        
+    </div>    
 
   </div>
 
   <!-- Social media -->
-
- 
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <h4 class="text-white">Nusrat Jahan - 300967157</h4>
@@ -85,7 +78,7 @@
         <li class="nav-item">
           <% } %>
 
-          <a class="nav-link text-white" href="/projects"><i class="fa fa-lg fa-briefcase"></i> Projects</a>
+          <a class="nav-link text-white" href="/project"><i class="fa fa-lg fa-briefcase"></i> Projects</a>
         </li>
 
         <% if(title == "Services") { %>
@@ -93,7 +86,7 @@
         <li class="nav-item">
           <% } %>
 
-          <a class="nav-link text-white" href="/services"><i class="fa fa-lg fa-bell"></i> Services</a>
+          <a class="nav-link text-white" href="/service"><i class="fa fa-lg fa-bell"></i> Services</a>
         </li>
 
         <% if(title == "Contact") { %>
@@ -108,10 +101,10 @@
           <li class="navbar-text"><i class="fa fa-lg fa-user"></i> 
             Welcome, <%= displayName %></li>
           <li class="nav-item"><a href="/logout" class="nav-link">
-            <i class="fa fa-lg fa-sign-out-alt"></i> Logout</a></li>
+            <i class="fas fa-lg fa-sign-out-alt"></i> Logout</a></li>
         <% } else { %>
           <li class="nav-item"><a href="/login" class="nav-link">
-            <i class="fa fa-lg fa-sign-in-alt"></i> Login</a></li>
+            <i class="fas fa-lg fa-sign-in-alt"></i> Login</a></li>
         <% } %>
         
       </ul>
