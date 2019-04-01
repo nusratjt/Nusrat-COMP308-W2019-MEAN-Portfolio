@@ -106,7 +106,7 @@ passport.use(strategy);
 
 
 app.use('/api', indexRouter);
-app.use('/api/project-list', projectRouter);
+app.use('/api/project-list', passport.authenticate('jwt', {session: false}), projectRouter);
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../../public/index.html'));
 });
