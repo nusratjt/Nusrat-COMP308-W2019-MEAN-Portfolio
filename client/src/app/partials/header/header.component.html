@@ -9,70 +9,49 @@
 
 -->
 
-  <div class="fixed-top">
+
   <div id="logoDiv">
-    <img src="assets/images/Nusrat_logo01.png" width="300px" height="100px" />
-    <div id="socialIcon">
-      <ul>
-        <li>
-            <a class="nav-link text-white" href="https://www.facebook.com" target="_blank"><i class="fa fa-lg fa-facebook"></i></a>
-        </li>
-        <li>
-            <a class="nav-link text-white" href="https://www.linkedin.com" target="_blank"><i class="fa fa-lg fa-linkedin"></i></a>
-        </li>
-        <li>
-            <a class="nav-link text-white" href="https://twitter.com/" target="_blank"><i class="fa fa-lg fa-twitter"></i></a>
-        </li>
-        <li>
-            <a class="nav-link text-white" href="https://slack.com/" target="_blank"><i class="fa fa-lg fa-slack"></i></a>
-        </li>
-      <br>
-        <small class="text-white pl-5">connect with me</small>
-
-      </ul>
-    </div>
-
+    <img src="assets/images/Nusrat_logo01.png" width="200px" height="60px" />
   </div>
-
-  <!-- Social media -->
-<div>
+  <div>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <h4 class="text-white">Nusrat Jahan - 300967157</h4>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
+      <h5 class="text-white">Nusrat Jahan - 300967157</h5>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
 
-              <a class="nav-link text-white" routerLink="/home"><i class="fa fa-lg fa-home"></i> Home
-                <span class="sr-only">(current)</span></a>
-            </li>
+            <a class="nav-link text-white" routerLink="/home"><i class="fa fa-lg fa-home"></i> Home
+              <span class="sr-only">(current)</span></a>
+          </li>
 
-            <li class="nav-item">
-              <a class="nav-link text-white" routerLink="/about"><i class="fa fa-lg fa-info"></i> About Me</a>
-            </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/about"><i class="fa fa-lg fa-info"></i> About Me</a>
+          </li>
 
-            <li class="nav-item">
-              <a class="nav-link text-white" routerLink="/project"><i class="fa fa-lg fa-briefcase"></i> Projects</a>
-            </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/project"><i class="fa fa-lg fa-briefcase"></i> Projects</a>
+          </li>
 
-            <li class="nav-item">
-              <a class="nav-link text-white" routerLink="/service"><i class="fa fa-lg fa-bell"></i> Services</a>
-            </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/service"><i class="fa fa-lg fa-bell"></i> Services</a>
+          </li>
 
-            <li class="nav-item">
-              <a class="nav-link text-white" routerLink="/contact"><i class="fa fa-lg fa-phone"></i> Contact</a>
-            </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/contact"><i class="fa fa-lg fa-phone"></i> Contact</a>
+          </li>
 
-            <li *ngIf="isLoggedIn()" class="navbar-text text-success ml-5 mr-5 d-none d-lg-inline"><i class="fas fa-lg fa-user"></i>
-              Welcome, {{ user.displayName }}</li>
+          <li *ngIf="isLoggedIn()" class="navbar-text text-success ml-5 mr-5 d-none d-lg-inline"><i
+              class="fas fa-lg fa-user"></i>
+            Welcome, {{ user.displayName }}</li>
 
-            <li *ngIf="isLoggedIn()" class="nav-item"><a (click)="onLogoutClick()" routerLink="/logout" class="nav-link">
+          <li *ngIf="isLoggedIn()" class="nav-item"><a (click)="onLogoutClick()" routerLink="/logout" class="nav-link">
               <i class="fas fa-lg fa-sign-out-alt"></i> Logout</a></li>
 
-            <li *ngIf="!isLoggedIn()" class="nav-item"><a routerLink="/login" class="nav-link">
+          <li *ngIf="!isLoggedIn()" class="nav-item"><a routerLink="/login" class="nav-link">
               <i class="fas fa-lg fa-sign-in-alt"></i> Login</a></li>
-          </ul>
-        </div>
-      </nav>
+        </ul>
+      </div>
+    </nav>
 
-</div >
+  </div>
 
