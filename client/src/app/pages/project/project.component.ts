@@ -1,4 +1,6 @@
+import { AuthService } from '../../services/auth.service';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-project',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    route: ActivatedRoute,
+    private authService: AuthService
+    ) {
+
+  }
 
   ngOnInit() {
+  }
+
+  isLoggedIn(): boolean {
+    return this.authService.loggedIn();
   }
 
 }
