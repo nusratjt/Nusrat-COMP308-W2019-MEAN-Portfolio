@@ -3,12 +3,15 @@ import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { Project } from '../models/project';
+import { User } from '../models/user';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProjectListService {
+
+  private user: User;
 
   private endpoint = 'http://localhost:3000/api/project-list/';
 
