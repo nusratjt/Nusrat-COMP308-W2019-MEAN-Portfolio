@@ -10,6 +10,7 @@ import { Project } from 'src/app/models/project';
   templateUrl: './project-details.component.html',
   styleUrls: ['./project-details.component.css']
 })
+
 export class ProjectDetailsComponent implements OnInit {
 
   title: string;

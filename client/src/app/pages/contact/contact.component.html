@@ -1,53 +1,16 @@
-<!-- Form based Contact page-->
-
 <div id="contactPage">
-  <h3 class="m-3 p-3 text-center text-primary">Leave your information below: </h3>
-  <fieldset class="w-85 p-5">
-
-    <!-- Contact form -->
-
-    <form class="form">
-
-      <!-- First name field -->
-      <div class="form-group">
-        <label for="FirstNameTextField">First Name</label>
-        <input type="text" placeholder="Enter First Name" class="form-control" id="FirstNameTextField" name="firstName"
-          required>
+  <h3 class="text-primary font-weight-bold p-5">
+      Leave your contact information
+  </h3>
+  <div class="container">
+      <div class="row">
+         <div class="col col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <a routerLink="contact-list" class="btn btn-primary"><i class="fas fa-users fa-lg"></i> Contact with me</a>
+                </div>
+              </div>
+          </div>
       </div>
-
-      <!-- Last name field -->
-      <div class="form-group">
-        <label for="LastNameTextField">Last Name</label>
-        <input type="text" placeholder="Enter Last Name" class="form-control" id="LastNameTextField" name="lastName"
-          required>
-      </div>
-
-      <!-- contact number field -->
-      <div class="form-group">
-        <label for="ContactNumTextField">Contact number</label>
-        <input type="text" placeholder="Enter phone number" class="form-control" id="ContactNumTextField"
-          name="contactNumber" required>
-      </div>
-
-      <!-- email field -->
-      <div class="form-group">
-        <label for="EmailTextField">Email address</label>
-        <input type="text" placeholder="Enter email address" class="form-control" id="EmailTextField" name="email"
-          required>
-      </div>
-
-      <!-- message field -->
-      <div class="form-group">
-        <label for="MessageTextField">Message</label>
-        <textarea placeholder="Leave me your message" rows="5" class="form-control" id="MessageTextField" name="message"
-          required></textarea>
-      </div>
-
-      <!-- submit button -->
-      <button type="submit" class="btn btn-primary">
-        <i class="fa fa-check-square-o"></i> Submit</button>
-    </form>
-
-  </fieldset>
-
+  </div>
 </div>
