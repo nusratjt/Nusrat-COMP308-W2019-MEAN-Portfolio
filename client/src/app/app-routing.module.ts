@@ -9,6 +9,8 @@ import { ProjectComponent } from './pages/project/project.component';
 import { ServiceComponent } from './pages/service/service.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ContactListComponent } from './contacts/contact-list/contact-list.component';
+import { ContactDetailsComponent } from './contacts/contact-details/contact-details.component';
+import { ContactDeleteComponent } from './contacts/contact-delete/contact-delete.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { ProjectListComponent } from './projects/project-list/project-list.component';
 import { ProjectDetailsComponent } from './projects/project-details/project-details.component';
@@ -30,6 +32,9 @@ const routes: Routes = [
   {path: 'service', component: ServiceComponent, data: {title: 'Service'}},
   {path: 'contact', component: ContactComponent, data: {title: 'Contact'}},
   {path: 'contact/contact-list', component: ContactListComponent, data: {title: 'Contact List'}},
+  {path: 'contact/contact-list/add', component: ContactDetailsComponent, data: {title: 'Add Contact'}},
+  {path: 'contact/contact-list/edit/:id', component: ContactDetailsComponent, data: {title: 'Edit Contact'}},
+  {path: 'contact/contact-list/delete/:id', component: ContactDeleteComponent, data: {title: 'Add Contact'}},
   {path: 'register', component: RegisterComponent, data: {title: 'Register'}},
   {path: 'login', component: LoginComponent, data: {title: 'login'}},
   {path: 'logout', redirectTo: '/login', pathMatch: 'full'},
