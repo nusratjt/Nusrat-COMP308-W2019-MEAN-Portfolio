@@ -12,6 +12,7 @@ import { User } from '../../models/user';
 })
 
 export class HeaderComponent implements OnInit {
+
   user: User;
 
   constructor(
