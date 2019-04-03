@@ -10,7 +10,8 @@ import { Contact } from '../models/contact';
 })
 export class ContactListService {
 
-  private endpoint = 'http://localhost:3000/api/contact-list/';
+  private endpoint = 'https://nusrat-comp308-w2019-portfolio.herokuapp.com/api/contact-list/';
+  //private endpoint = 'http://localhost:3000/api/contact-list/';
 
   private httpOptions = {
     headers: new HttpHeaders({

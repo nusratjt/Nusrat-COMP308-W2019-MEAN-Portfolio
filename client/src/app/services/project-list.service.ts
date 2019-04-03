@@ -14,7 +14,8 @@ export class ProjectListService {
   private user: User;
   private authToken: any = null;
 
-  private endpoint = 'http://localhost:3000/api/project-list/';
+  private endpoint = 'https://nusrat-comp308-w2019-portfolio.herokuapp.com/api/project-list/';
+  //private endpoint = 'http://localhost:3000/api/project-list/';
 
   private httpOptions = {
     headers: new HttpHeaders({
