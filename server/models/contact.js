@@ -4,7 +4,7 @@ let mongoose = require('mongoose');
 let contactSchema = mongoose.Schema({
     firstName: String,
     lastName: String,
-    contactNumber: Number,
+    contactNumber: String,
     email: String,
     message: String
 },
