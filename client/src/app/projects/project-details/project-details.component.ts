@@ -1,3 +1,11 @@
+/**
+  * file name: client/src/app/projects/project-details/project-details.component.ts
+  * auther's name : Tom Tsiliopoulos
+  * Student name: Nusrat Jahan
+  * Student Id: 300967157
+  * Date: April 04, 2019
+  */
+
 import { Component, OnInit } from '@angular/core';
 import { ProjectListService } from 'src/app/services/project-list.service';
 import { FlashMessagesService } from 'angular2-flash-messages';
@@ -42,6 +50,7 @@ export class ProjectDetailsComponent implements OnInit {
     });
   }
 
+  // functions when project form is submitted either to edit info or to add new project
   onDetailsPageSubmit(): void {
     switch (this.title) {
       case 'Add Project':

@@ -1,3 +1,12 @@
+/**
+  * file name: client/src/app/services/auth.service.ts
+  * auther's name : Tom Tsiliopoulos
+  * modified by: Nusrat Jahan
+  * Student Id: 300967157
+  * Date: April 04, 2019
+  */
+
+
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs';

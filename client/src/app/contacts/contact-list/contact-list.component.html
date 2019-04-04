@@ -1,9 +1,22 @@
+<!--
+/**
+  * file name: client/src/app/contacts/contact-list.component.html
+  * auther's name : Tom Tsiliopoulos
+  * Student name: Nusrat Jahan
+  * Student Id: 300967157
+  * Date: April 04, 2019
+  */
+
+-->
+
+<!-- Shows contact list -->
+
 <div class="container">
   <div class="row">
       <div class="col-md-offset-3 col-md-6">
           <h1>Contact List</h1>
           <br>
-          <table class="table table-bordered table-striped table-hover">
+          <table class="w-75 table table-bordered table-striped table-hover">
               <!-- Header Row-->
               <tr>
                   <th class="text-center">First Name</th>
@@ -23,11 +36,13 @@
                       <td class="text-center">{{ contact.email }}</td>
                       <td class="text-center">{{ contact.message }}</td>
 
+                      <!-- Edit contact button -->
                       <td class="text-center">
                         <a routerLink="/contact/contact-list/edit/{{ contact._id }}"
                             class="btn btn-primary"><i class="fas fa-pencil-alt"></i> Edit</a>
                         </td>
 
+                          <!-- delete contact button -->
                       <td class="text-center">
                               <a routerLink="delete/{{ contact._id }}"
                                   class="btn btn-danger"><i class="fas fa-trash-alt"></i> Delete</a>

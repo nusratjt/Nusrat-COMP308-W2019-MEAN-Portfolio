@@ -1,3 +1,13 @@
+/**
+  * file name: client/src/app/pages/login/login.component.ts
+  * auther's name : Tom Tsiliopoulos
+  * modified by: Nusrat Jahan
+  * Student Id: 300967157
+  * Date: April 04, 2019
+  */
+
+
+//modules
 import { Component, OnInit } from '@angular/core';
 import { FlashMessagesService } from 'angular2-flash-messages';
 import { AuthService } from 'src/app/services/auth.service';
@@ -23,6 +33,7 @@ export class LoginComponent implements OnInit {
     this.user = new User();
   }
 
+  // functions when submit button is clicke to log in
   onLoginSubmit(): void {
      this.authService.authenticateUser(this.user).subscribe(data => {
       if (data.success) {

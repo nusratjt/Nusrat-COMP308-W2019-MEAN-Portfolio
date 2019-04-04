@@ -1,3 +1,12 @@
+/**
+  * file name: client/src/app/app-routing.module.ts
+  * auther's name : Tom Tsiliopoulos
+  * modified by: Nusrat Jahan
+  * Student Id: 300967157
+  * Date: April 04, 2019
+  */
+
+
 // Modules
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';

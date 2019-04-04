@@ -1,8 +1,21 @@
+<!--
+/**
+  * file name: client/src/app/pages/login/login.component.html
+  * auther's name : Tom Tsiliopoulos
+  * modified by: Nusrat Jahan
+  * Student Id: 300967157
+  * Date: April 04, 2019
+  */
+
+
+-->
+
 <div id="loginPage">
         <div class="row">
             <div class="col-md-offset-4 col-md-4">
                 <h1>Please Login</h1>
                 <form autocomplete="off" (submit)="onLoginSubmit()">
+                  <!-- username field -->
                     <fieldset class="form-group">
                         <label for="username">Username:</label>
                         <input type="text" class="form-control"
@@ -10,6 +23,7 @@
                         name="username" placeholder="Enter Username"
                         id="username" required autofocus autocomplete="off">
                     </fieldset>
+                    <!-- password field -->
                     <fieldset class="form-group">
                         <label for="password">Password:</label>
                         <input type="password" class="form-control"
@@ -19,6 +33,7 @@
                         or
                         <a routerLink="/register">Register Here</a>
                     </fieldset>
+                    <!-- button to submit or cancel -->
                     <fieldset class="form-group text-right">
                         <input type="submit" class="btn btn-success" value="Login">
                         <a routerLink="/home">

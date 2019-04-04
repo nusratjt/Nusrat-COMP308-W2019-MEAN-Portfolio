@@ -1,3 +1,11 @@
+/**
+  * file name: client/src/app/projects/project-list/project-list.component.ts
+  * auther's name : Tom Tsiliopoulos
+  * modified by: Nusrat Jahan
+  * Student Id: 300967157
+  * Date: April 04, 2019
+  */
+
 import { Component, OnInit } from '@angular/core';
 import { ProjectListService } from 'src/app/services/project-list.service';
 import { FlashMessagesService } from 'angular2-flash-messages';
@@ -30,16 +38,19 @@ export class ProjectListComponent implements OnInit {
     this.displayProjectList();
   }
 
+  // functions when project is deleted
   private onDeleteClick(): void {
     if(!confirm('Are You Sure?')) {
       this.router.navigate(['/project/project-list']);
     }
   }
 
+  // functions to display the project list
   displayProjectList(): void {
     this.projectListService.getList().subscribe(data => {
       if(data.success) {
         this.projects = data.projectList;
+        // when user is not logged in
       } else {
         this.flashMessage.show('User must be logged-in', {cssClass: 'alert-danger', timeOut: 3000});
       }

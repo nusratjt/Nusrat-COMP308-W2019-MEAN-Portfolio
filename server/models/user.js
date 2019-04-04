@@ -1,3 +1,12 @@
+/**
+  * file name: models/user.js  
+  * auther's name : Tom Tsiliopoulos
+  * Student name: Nusrat Jahan
+  * Student Id: 300967157
+  * Date: April 04, 2019
+  */
+
+
 // require modules for our User Model
 let mongoose = require("mongoose");
 let passportLocalMongoose = require("passport-local-mongoose");

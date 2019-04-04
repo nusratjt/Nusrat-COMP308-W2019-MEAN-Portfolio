@@ -1,7 +1,19 @@
+<!--
+
+  /**
+  * file name: client/src/app/projects/project-list/project-list.component.html
+  * auther's name : Tom Tsiliopoulos
+  * modified by: Nusrat Jahan
+  * Student Id: 300967157
+  * Date: April 04, 2019
+  */
+-->
+
 <div id="projectPage">
   <div class="row">
     <div class="col-md-offset-3 col-md-6">
       <h1 class="mt-5">Project List</h1><br>
+      <!-- button to add a new project -->
       <a class="btn btn-primary" routerLink="/project/project-list/add" role="button">
         <i class="fa fa-plus-circle"></i> Add new Project</a>
       <br>
@@ -23,10 +35,12 @@
           <td class="text-center">{{ project.projectName }}</td>
           <td class="text-center">{{ project.description }}</td>
           <td class="text-center">
+            <!-- button to edit project information -->
             <a routerLink="/project/project-list/edit/{{ project._id }}"
             class="btn btn-primary"><i class="fas fa-pencil-alt"></i> Edit</a>
           </td>
           <td class="text-center">
+            <!-- button to delete the project -->
             <a routerLink="/project/project-list/delete/{{ project._id }}" (click)="onDeleteClick()"
             class="btn btn-danger"><i class="fas fa-trash-alt"></i> Delete</a>
           </td>

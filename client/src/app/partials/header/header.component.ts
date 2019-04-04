@@ -1,3 +1,11 @@
+/**
+  * file name: client/src/app/partials/header/header.component.ts
+  * created by: Nusrat Jahan
+  * Student Id: 300967157
+  * Date: April 04, 2019
+  */
+
+
 import { Component, OnInit } from '@angular/core';
 import { FlashMessagesService } from 'angular2-flash-messages';
 import { AuthService } from 'src/app/services/auth.service';
@@ -25,6 +33,7 @@ export class HeaderComponent implements OnInit {
     this.user = new User();
   }
 
+  // functions when user log out
   onLogoutClick(): void {
     this.authService.logout().subscribe(data => {
       this.flashMessage.show(data.msg, {cssClass: 'alert-warning', timeOut: 5000});
@@ -32,6 +41,7 @@ export class HeaderComponent implements OnInit {
     });
   }
 
+  // functions when user log in
   isLoggedIn(): boolean {
     const result = this.authService.loggedIn();
     if(result) {

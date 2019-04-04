@@ -1,3 +1,11 @@
+/**
+  * file name: client/src/app/guards/auth.guard.ts
+  * auther's name : Tom Tsiliopoulos
+  * Student name: Nusrat Jahan
+  * Student Id: 300967157
+  * Date: April 04, 2019
+  */
+
 import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, Router } from '@angular/router';
 
